@@ -27,6 +27,9 @@ def hello_world():
     outcome = predictor.predict(X=X)
     return str(outcome)
 
+@app.route('/hello')
+def hello():
+    return 'Hello, World'
 
 if __name__ == "__main__":
   app.run()
