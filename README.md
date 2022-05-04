@@ -10,12 +10,13 @@
 I ) Docker build images
 
 En ce metant dans le dossier correspondant:
+
 1) dataset_image
     docker build -t dataset_image -f dataset_image.Dockerfile .
 
 2) train_image
     docker build -t train_image -f train_image.Dockerfile .
-    
+
 
 
 II ) Create Volume
@@ -34,8 +35,29 @@ II) Docker run images with volume
 
             -it et bash permet de laisser le container ouvert tant que l'interface terminal est ouverte. On le met car notre container n'a pas d'os mais seulement python 3
 
+
+
 III) Docker push in repo
+
+docker login
+docker tag my-image username/my-repo
+docker push username/my-repo
+
+
+#create fork repo sofiane
 
 
 
 docker push 2570/devops_train_image_1:tagname
+
+
+
+Solution
+
+repo -> settings -> secret -> actions
+
+tags name = short commit
+
+main.yml
+
+name de la pipeline

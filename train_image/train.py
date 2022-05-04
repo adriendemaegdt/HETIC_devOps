@@ -17,3 +17,4 @@ with open('./model.json', 'w') as f:
   f.write(dumps(predictor.coef_.tolist()))
   
 print(predictor.coef_)
+
